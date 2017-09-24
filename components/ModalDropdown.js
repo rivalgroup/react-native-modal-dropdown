@@ -104,7 +104,6 @@ export default class ModalDropdown extends Component {
   render() {
     return (
       <View {...this.props}>
-        {this._renderButton()}
         {this._renderModal()}
       </View>
     );
