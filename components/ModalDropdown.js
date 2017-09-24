@@ -104,6 +104,7 @@ export default class ModalDropdown extends Component {
   render() {
     return (
       <View {...this.props}>
+        {this._renderButton()}
         {this._renderModal()}
       </View>
     );
@@ -156,19 +157,7 @@ export default class ModalDropdown extends Component {
       <TouchableOpacity ref={button => this._button = button}
                         disabled={this.props.disabled}
                         accessible={this.props.accessible}
-                        onPress={this._onButtonPress.bind(this)}>
-        {
-          this.props.children ||
-          (
-            <View style={styles.button}>
-              <Text style={[styles.buttonText, this.props.textStyle]}
-                    numberOfLines={1}>
-                {this.state.buttonText}
-              </Text>
-            </View>
-          )
-        }
-      </TouchableOpacity>
+                        onPress={this._onButtonPress.bind(this)} />
     );
   }
 
