@@ -338,9 +338,9 @@ export default class ModalDropdown extends Component {
       }
     }
     return (
-        <TouchableHighlight {...preservedProps}>
+        <TouchableWithoutFeedback {...preservedProps}>
     {row}
-  </TouchableHighlight>
+  </TouchableWithoutFeedback>
   );
   }
 
